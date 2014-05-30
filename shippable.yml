@@ -10,7 +10,7 @@ before_script:
 
 script:
   - php -v
-  - phpunit --log-junit shippable/testresults/junit.xml --coverage-xml --bootstrap tests/bootstrap.php tests
+  - phpunit --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage --bootstrap tests/bootstrap.php tests
 
 notifications:
   email: false

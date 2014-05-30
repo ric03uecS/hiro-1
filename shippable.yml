@@ -4,12 +4,13 @@ php:
   - 5.5
 
 before_script:
+  - mkdir -p shippable/codecoverage
   - mkdir -p shippable/testresult
   - composer dumpautoload
 
 script:
   - php -v
-  - phpunit --log-junit shippable/testresults/junit.xml --bootstrap tests/bootstrap.php tests
+  - phpunit --log-junit shippable/testresults/junit.xml --coverage-xml --bootstrap tests/bootstrap.php tests
 
 notifications:
   email: false

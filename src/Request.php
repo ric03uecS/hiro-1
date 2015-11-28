@@ -4,10 +4,14 @@ namespace Infor\Hiro;
 
 class Request
 {
+    private $currentUri;
+
     private $get = [];
     private $post = [];
     
     public function __construct() {
+        $this->currentUri = $_SERVER['REQUEST_URI'];
+
         foreach($_GET as $key => $item) {
             $this->get[$key] = $item;
         }
@@ -31,5 +35,10 @@ class Request
         }
         
         return $this->post[$key];
+    }
+
+    public function getCurrentUri()
+    {
+        return $this->currentUri;
     }
 }

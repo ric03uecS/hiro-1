@@ -4,6 +4,19 @@ namespace Infor\Hiro;
 
 class Response
 {
-    public function __construct() {
+    private $content = '';
+
+    public function __construct($content) {
+        $this->content = $content;
+    }
+
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    public function render()
+    {
+        echo $this->getContent();
     }
 }

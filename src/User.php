@@ -14,7 +14,7 @@ class User
     public function getById($id) {
         $sql = "SELECT * FROM USERS WHERE id = :id";
         $stmt = $this->db->prepare($sql);
-        $stmt->execute(array(':id' => $id));
+        $stmt->execute([':id' => $id]);
 
         return $stmt->fetch(\PDO::FETCH_ASSOC);
     }

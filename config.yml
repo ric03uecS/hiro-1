@@ -1,4 +1,4 @@
-config:
+container:
     db:
         class: 'Hiro\Db'
         arguments: ['sqlite:///tmp/db.sqlite']

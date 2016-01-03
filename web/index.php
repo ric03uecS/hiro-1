@@ -6,7 +6,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 $serviceConfig = Yaml::parse(file_get_contents('config.yml'));
 
-$serviceContainer = new Hiro\ServiceContainer($serviceConfig['config']);
+$serviceContainer = new Hiro\ServiceContainer($serviceConfig['container']);
 
 // custom routings go here
 

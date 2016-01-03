@@ -1,10 +1,6 @@
 <?php
 
-namespace Infor;
-
 use Symfony\Component\Yaml\Yaml;
-
-ini_set('display_errors', 'stderr');
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

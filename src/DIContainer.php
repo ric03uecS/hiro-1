@@ -1,6 +1,6 @@
 <?php
 
-namespace Infor\Hiro;
+namespace Hiro;
 
 class DIContainer
 {

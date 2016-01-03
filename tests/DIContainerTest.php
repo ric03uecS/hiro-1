@@ -1,24 +1,24 @@
 <?php
 
-namespace Infor\Hiro\Tests;
+namespace Hiro\Tests;
 
 class DIContainerTest extends \PHPUnit_Framework_TestCase
 {
     public function testWithString()
     {
-        $container = new \Infor\Hiro\DIContainer();
+        $container = new \Hiro\DIContainer();
         $container->param = 'value';
 
         $this->assertEquals('value', $container->param);
     }
 
     public function testWithClosure() {
-        $container = new \Infor\Hiro\DIContainer();
+        $container = new \Hiro\DIContainer();
         $container->service = function($c) {
-            return new \Infor\Hiro\Tests\Service();
+            return new \Hiro\Tests\Service();
         };
 
 
-        $this->assertInstanceOf('\Infor\Hiro\Tests\Service', $container->service);
+        $this->assertInstanceOf('\Hiro\Tests\Service', $container->service);
     }
 }

@@ -4,8 +4,8 @@ class ServiceContainerTest extends PHPUnit_Framework_TestCase
 {
     public function testWithArgument()
     {
-        $config = ['some' => ['class' => '\Infor\Hiro\Tests\Service', 'arguments' => ['Test']]];
-        $container = new Infor\Hiro\ServiceContainer($config);
+        $config = ['some' => ['class' => '\Hiro\Tests\Service', 'arguments' => ['Test']]];
+        $container = new Hiro\ServiceContainer($config);
 
         $this->assertEquals($container->some->arg, 'Test');
     }
@@ -13,13 +13,13 @@ class ServiceContainerTest extends PHPUnit_Framework_TestCase
     public function testWithCall()
     {
         $config = [
-            'serviceWithArgument' => ['class' => '\Infor\Hiro\Tests\Service', 'arguments' => ['value']],
-            'serviceWithCall' => ['class' => '\Infor\Hiro\Tests\Service', 'calls' => ['serviceWithArgument']]
+            'serviceWithArgument' => ['class' => '\Hiro\Tests\Service', 'arguments' => ['value']],
+            'serviceWithCall' => ['class' => '\Hiro\Tests\Service', 'calls' => ['serviceWithArgument']]
         ];
 
-        $container = new Infor\Hiro\ServiceContainer($config);
+        $container = new Hiro\ServiceContainer($config);
 
-        $this->assertInstanceOf('\Infor\Hiro\Tests\Service', $container->serviceWithCall);
+        $this->assertInstanceOf('\Hiro\Tests\Service', $container->serviceWithCall);
         $this->assertEquals($container->serviceWithCall->arg->arg, 'value');
     }
 }

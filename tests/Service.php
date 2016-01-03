@@ -1,6 +1,6 @@
 <?php
 
-namespace Infor\Hiro\Tests;
+namespace Hiro\Tests;
 
 class Service
 {

@@ -1,19 +1,19 @@
 config:
     db:
-        class: 'Infor\Hiro\Db'
-        arguments: ['sqlite:///var/www/alcohol.gruszka.info/codiad/workspace/php-tests/db.sqlite']
+        class: 'Hiro\Db'
+        arguments: ['sqlite:///tmp/db.sqlite']
 
     request:
-        class: 'Infor\Hiro\Request'
+        class: 'Hiro\Request'
 
     router:
-        class: 'Infor\Hiro\Router'
+        class: 'Hiro\Router'
         calls: ['request']
 
     storage:
-        class: 'Infor\Hiro\CookieStorage'
+        class: 'Hiro\CookieStorage'
         arguments: ['cookie_xyz']
 
     user:
-        class: 'Infor\Hiro\User'
+        class: 'Hiro\User'
         calls: ['storage', 'db']

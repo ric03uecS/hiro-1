@@ -18,8 +18,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Infor\\Hiro\\": "src/",
-            "Infor\\Hiro\\Tests\\": "tests/"
+            "Hiro\\": "src/",
+            "Hiro\\Tests\\": "tests/"
         }
     }
 }

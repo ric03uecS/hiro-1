@@ -9,6 +9,6 @@
 $serviceContainer->router->addRoute('/hello-world', function() {
     $currentUri = $this->request->getCurrentUri();
     $content = 'Hello World!';
-    return new Response($content);
+    return new Hiro\Response($content);
 });
 ```

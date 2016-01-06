@@ -41,4 +41,9 @@ class Request
     {
         return $this->currentUri;
     }
+
+    public function getMethod()
+    {
+        return strtolower($_SERVER['REQUEST_METHOD']);
+    }
 }

@@ -1,19 +1,7 @@
 container:
-    db:
-        class: 'Hiro\Db'
-        arguments: ['sqlite:///tmp/db.sqlite']
-
     request:
         class: 'Hiro\Request'
 
     router:
         class: 'Hiro\Router'
         calls: ['request']
-
-    storage:
-        class: 'Hiro\CookieStorage'
-        arguments: ['cookie_xyz']
-
-    user:
-        class: 'Hiro\User'
-        calls: ['storage', 'db']

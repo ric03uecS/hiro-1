@@ -27,7 +27,7 @@ db:
 
 ## Example routing:
 ```php
-$serviceContainer->router->addRoute('/hello-world', function() {
+$serviceContainer->router->addRoute('get', '/hello-world', function() {
     $currentUri = $this->request->getCurrentUri();
     $content = 'Hello World!';
     return new Hiro\Response($content);

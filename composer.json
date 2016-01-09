@@ -18,7 +18,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Hiro\\": "src/",
+            "Hiro\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
             "Hiro\\Tests\\": "tests/"
         }
     }

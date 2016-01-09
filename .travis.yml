@@ -14,3 +14,7 @@ script:
 
 notifications:
   email: true
+
+addons:
+  code_climate:
+    repo_token: 1d39bf5b23666933719481b2b0f6371fb975bb7e55a313d07e953d474abfa8b8

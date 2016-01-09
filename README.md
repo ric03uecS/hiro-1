@@ -1,6 +1,7 @@
 # Hiro Framework
 
 [![Build Status](https://travis-ci.org/bgruszka/hiro.svg?branch=master)](https://travis-ci.org/bgruszka/hiro)
+[![Code Climate](https://codeclimate.com/github/bgruszka/hiro/badges/gpa.svg)](https://codeclimate.com/github/bgruszka/hiro)
 
 ## DI Container:
 To config Dependency Injection Container place your dependencies in section _container_ in the _config.yml_.

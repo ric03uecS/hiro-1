@@ -21,4 +21,14 @@ class DIContainerTest extends \PHPUnit_Framework_TestCase
 
         $this->assertInstanceOf('\Hiro\Tests\Service', $container->service);
     }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     * @expectedExceptionMessage Value "service" is not defined.
+     */
+    public function testThrowExceptionWhenServiceDoesNotExist() {
+        $container = new \Hiro\DIContainer();
+
+        $container->service;
+    }
 }

@@ -3,13 +3,10 @@ language: php
 php:
   - 5.5
 
-before_script:
+build:
+ ci:
   - mkdir -p shippable/codecoverage
   - mkdir -p shippable/testresults
   - composer dumpautoload
-
-script:
   - phpunit --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage --bootstrap tests/bootstrap.php tests
 
-notifications:
-  email: false
